@@ -7,12 +7,12 @@ public class TestConvertNumToInt2<N extends Number> {
 	  return i;
   }
   public static void main(String args[]) {
-	  TestConvertNumToInt2<Double> numToInt = 
-			  new TestConvertNumToInt2<Double>();
+	  TestConvertNumToInt2<Number> numToInt = 
+			  new TestConvertNumToInt2<Number>();
 	  int myValue = numToInt.convert(3.5);
 	  System.out.println(myValue);
   }
-  // การระบุ N extends Number คือ การจำกัดขอบเขตของชนิดข้อมูลที่จะนำมากำหนดให้กับ
-  // Type parameter N โดยชนิดข้อมูลที่จะนำมากำหนดให้กับ Type parameter N ต้องเป็น
-  // ชนิดข้อมูลของคลาสที่สืบทอดคุณสมบัติมาจากคลาส Number หรือเป็นตัวคลาส Number เองเท่านั้น
+  // จะพบว่า Type argument คือ Class type ชื่อคลาส Number ซึ้งเราสามารถนำคลาสนี้มากำหนด
+  // ให้กับ Type parameter N ได้ เพราะเรากำหนดคำสั่งเป็น N extends Number ซึ้งคลาส Number
+  // ถือว่าอยู่ภายในขอบเขตที่ได้กำหนดขึ้น
 }
